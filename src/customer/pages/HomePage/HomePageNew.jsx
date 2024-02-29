@@ -13,8 +13,6 @@ const HomePageNew = () => {
             <HomeSectionCarosel data={mens_kurta} sectionName={"Men's Shoes"}/>
             <HomeSectionCarosel data={mens_kurta} sectionName={"Men's Shirt"}/>
             <HomeSectionCarosel data={mens_kurta} sectionName={"Women's Dress"}/>
-
-
         </div>
     </div>
   )
