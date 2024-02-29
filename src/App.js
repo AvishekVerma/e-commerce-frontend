@@ -10,6 +10,8 @@ import ProductDetails from './customer/components/ProductDetails/ProductDetails'
 import ProductReviewCard from './customer/components/ProductDetails/ProductRevieCard';
 import ProductCard from './customer/components/Product/ProductCard';
 import Cart from './customer/components/Cart/Cart';
+import Checkout from './customer/components/Checkout/Checkout';
+import DeliveryAddressForm from './customer/components/Checkout/DeliveryAddressForm';
 function App() {
   return (
     <div className="App">
@@ -22,7 +24,9 @@ function App() {
         {/* <ProductCard  /> */}
         {/* <ProductDetails/> */}
         {/* <ProductReviewCard/> */}
-        <Cart/>
+        {/* <Cart/> */}
+        <Checkout/>
+        {/* <DeliveryAddressForm/> */}
       </div>
       <Footer/>
     </div>
