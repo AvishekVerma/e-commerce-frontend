@@ -12,6 +12,8 @@ import ProductCard from './customer/components/Product/ProductCard';
 import Cart from './customer/components/Cart/Cart';
 import Checkout from './customer/components/Checkout/Checkout';
 import DeliveryAddressForm from './customer/components/Checkout/DeliveryAddressForm';
+import Order from './customer/components/Order/Order';
+import OrderDetails from './customer/components/Order/OrderDetails';
 function App() {
   return (
     <div className="App">
@@ -25,8 +27,10 @@ function App() {
         {/* <ProductDetails/> */}
         {/* <ProductReviewCard/> */}
         {/* <Cart/> */}
-        <Checkout/>
+        {/* <Checkout/> */}
         {/* <DeliveryAddressForm/> */}
+        {/* <Order/> */}
+        <OrderDetails/>
       </div>
       <Footer/>
     </div>
