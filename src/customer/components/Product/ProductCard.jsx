@@ -7,7 +7,6 @@ const ProductCard = ({ product }) => {
             <div>
                 <img className='h-full w-full object-cover-left-top' src={product.imageUrl} alt="" />
             </div>
-
             <div className='textPart bg-white space-x-2'>
                 <h6 className='font-bold opacity-60'>{product.brand}</h6>
                 <p>{product.title}</p>
@@ -17,7 +16,6 @@ const ProductCard = ({ product }) => {
                     <p className='text-green-600 font-semibold'>{product.discountPersent} % off</p>
                 </div>
             </div>
-
 
         </div>
     )
