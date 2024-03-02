@@ -3,7 +3,7 @@ import MainCarousel from '../../components/HomeCarosel/MainCarousel'
 import HomeSectionCarosel from '../../components/HomeSectionCarosel/HomeSectionCarosel'
 import { mens_kurta } from '../../../Data/mens_kurta'
 
-const HomePageNew = () => {
+const HomePage = () => {
   return (
     <div>
         <MainCarousel/>
@@ -18,4 +18,4 @@ const HomePageNew = () => {
   )
 }
 
-export default HomePageNew
+export default HomePage

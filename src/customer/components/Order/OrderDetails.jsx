@@ -52,7 +52,7 @@ const OrderDetails = () => {
 
             <Grid container className="space-y-5">
                 {[1,1,1,1].map((item) => (
-                    <Grid
+                    <Grid 
                         container
                         item
                         className="shadow-xl rounded-md p-5 border"

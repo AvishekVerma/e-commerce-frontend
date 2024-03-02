@@ -11,7 +11,7 @@ import { Avatar, Button, Menu, MenuItem } from "@mui/material";
 
 import { deepPurple } from "@mui/material/colors";
 
-import { navigation } from "./navigation";
+import { navigation } from "./NavigationData";
 import { useNavigate } from "react-router-dom";
 
 
@@ -19,7 +19,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function NavigationNew() {
+export default function Navigation() {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const [openAuthModal, setOpenAuthModal] = useState(false);
@@ -27,8 +27,8 @@ export default function NavigationNew() {
   const openUserMenu = Boolean(anchorEl);
   const jwt = localStorage.getItem("jwt");
 
- 
-  
+
+
   const handleUserClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -41,17 +41,13 @@ export default function NavigationNew() {
   };
   const handleClose = () => {
     setOpenAuthModal(false);
-   
+
   };
 
   const handleCategoryClick = (category, section, item, close) => {
     navigate(`/${category.id}/${section.id}/${item.id}`);
     close();
   };
-
-  
-
-  
 
   return (
     <div className="bg-white pb-10">
@@ -239,14 +235,15 @@ export default function NavigationNew() {
 
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
-                
-                  <span className="sr-only">Your Company</span>
-                  <img
-                    src="https://res.cloudinary.com/ddkso1wxi/image/upload/v1675919455/Logo/Copy_of_Zosh_Academy_nblljp.png"
-                    alt="Shopwithzosh"
-                    className="h-8 w-8 mr-2"
-                  />
-                
+
+                <span className="sr-only">Your Company</span>
+                <img
+                  onClick={()=> navigate("/")}
+                  src="https://res.cloudinary.com/ddkso1wxi/image/upload/v1675919455/Logo/Copy_of_Zosh_Academy_nblljp.png"
+                  alt="shopWithAvishek"
+                  className="h-8 w-8 mr-2"
+                />
+
               </div>
 
               {/* Flyout menus */}
@@ -382,6 +379,7 @@ export default function NavigationNew() {
               </Popover.Group>
 
               <div className="ml-auto flex items-center">
+                {/* Profile and Signin Menu */} 
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   {true ? (
                     <div>
@@ -418,10 +416,10 @@ export default function NavigationNew() {
                           "aria-labelledby": "basic-button",
                         }}
                       >
-              
-                        
-                        <MenuItem >
-                          {true?.role==="ROLE_ADMIN"?"Admin Dashboard":"My Orders"}
+
+                        <MenuItem >My Profile</MenuItem>
+                        <MenuItem onClick={() => navigate("/account/order")} >
+                          My Orders
                         </MenuItem>
                         <MenuItem >Logout</MenuItem>
                       </Menu>
@@ -450,7 +448,7 @@ export default function NavigationNew() {
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
                   <Button
-                    
+                    onClick={()=>navigate("/cart")}
                     className="group -m-2 flex items-center p-2"
                   >
                     <ShoppingBagIcon
@@ -468,7 +466,7 @@ export default function NavigationNew() {
           </div>
         </nav>
       </header>
-      
+
     </div>
   );
 }

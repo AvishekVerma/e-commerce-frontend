@@ -7,12 +7,17 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 
 const Cart = () => {
+    const navigate = useNavigate();
+
+    const handleCheckout =() =>{
+        navigate("/checkout?step=2")
+    }
     return (
         <div>
             <div className="lg:grid grid-cols-3 lg:px-16 relative">
                 <div className="lg:col-span-2 lg:px-5 bg-white">
                     <div className=" space-y-3">
-                        <CartItem />
+                        {[1,1,1,1,1,1].map((item)=><CartItem/>)}
                     </div>
                 </div>
                 <div className="px-5 sticky top-0 h-[100vh] mt-5 lg:mt-0 ">
@@ -50,7 +55,7 @@ const Cart = () => {
                         </div>
 
                         <Button
-                            // onClick={() => navigate("/checkout?step=2")}
+                            onClick={()=>handleCheckout()}
                             variant="contained"
                             type="submit"
                             sx={{ padding: ".8rem 2rem", marginTop: "2rem", width: "100%" }}
