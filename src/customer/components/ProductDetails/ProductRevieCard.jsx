@@ -25,7 +25,7 @@ const ProductReviewCard = ({item}) => {
             <div className="">
               <p className="font-semibold text-lg">
                 {/* {item.user.firstName} */}
-                Ram
+                Raam
                 </p>
               <p className="opacity-70">April 5, 2023</p>
             </div>
