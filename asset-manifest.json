@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/AvishekVerma/e-commerce-frontend/static/css/main.25e935a0.css",
-    "main.js": "/AvishekVerma/e-commerce-frontend/static/js/main.1f6c7cd8.js",
+    "main.js": "/AvishekVerma/e-commerce-frontend/static/js/main.7e5b955d.js",
     "static/js/453.4297e0f3.chunk.js": "/AvishekVerma/e-commerce-frontend/static/js/453.4297e0f3.chunk.js",
     "index.html": "/AvishekVerma/e-commerce-frontend/index.html",
     "main.25e935a0.css.map": "/AvishekVerma/e-commerce-frontend/static/css/main.25e935a0.css.map",
-    "main.1f6c7cd8.js.map": "/AvishekVerma/e-commerce-frontend/static/js/main.1f6c7cd8.js.map",
+    "main.7e5b955d.js.map": "/AvishekVerma/e-commerce-frontend/static/js/main.7e5b955d.js.map",
     "453.4297e0f3.chunk.js.map": "/AvishekVerma/e-commerce-frontend/static/js/453.4297e0f3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.25e935a0.css",
-    "static/js/main.1f6c7cd8.js"
+    "static/js/main.7e5b955d.js"
   ]
 }
