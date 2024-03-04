@@ -17,7 +17,7 @@ const CustomerRouters = () => {
         <Navigation />
       </div>
       <Routes>
-        <Route path='/' element={<HomePage />}></Route>
+        <Route path='https://github.com/AvishekVerma/e-commerce-frontend' element={<HomePage />}></Route>
         <Route path='/cart' element={<Cart/>}></Route>
         <Route path='/:labelOne/:lableTwo/:lableThree' element={<Product/>}></Route>
         <Route path='/product/:productId' element={<ProductDetails/>}></Route>
