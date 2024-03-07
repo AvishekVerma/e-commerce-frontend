@@ -1,3 +1,12 @@
+
+#Cmd To Deploy project on GitHub Pages
+ 
+  "homepage": "https://github.com/AvishekVerma/e-commerce-frontend",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
