@@ -2,11 +2,12 @@ import React from 'react'
 import { Grid, TextField, Button, Box, Snackbar, Alert, MenuItem, Select, InputLabel, FormControl } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { login } from '../../State/Auth/Action';
 
 const LoginForm = () => {
 
     const navigate = useNavigate();
-    // const dispatch=useDispatch();
+    const dispatch=useDispatch();
 
     // useEffect(() => {
     //     if (auth.user || auth.error) setOpenSnackBar(true)
@@ -15,16 +16,12 @@ const LoginForm = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
-
         const userData = {
             email: data.get("email"),
-            password: data.get("password"),
-
+            password: data.get("password")
         }
         console.log("login user", userData);
-
-        // dispatch(login(userData));
-
+        dispatch(login(userData))
     };
 
     return (

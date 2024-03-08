@@ -15,9 +15,8 @@ const RegisterForm = () => {
 
     useEffect(()=>{
         if(jwt){
-            dispatch(getUser())
+            dispatch(getUser(jwt))
         }
-        dispatch(getUser())
     },[jwt,auth.jwt])
 
     const handleSubmit = (event) => {
