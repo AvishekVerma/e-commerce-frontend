@@ -1,9 +1,28 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import AddressCard from '../AddressCard/AddressCard'
 import CartItem from '../Cart/CartItem'
 import { Button } from '@mui/material'
+import { useDispatch, useSelector } from 'react-redux'
+import { createPayment } from '../../../State/Payment/Action'
+import { useLocation } from 'react-router-dom'
+import { getOrderById } from '../../../State/Order/Action'
 
 const OrderSummary = () => {
+
+    const dispatch=useDispatch()
+    const location=useLocation()
+    const {order} = useSelector(store=>store)
+    const searchParams = new URLSearchParams(location.search)
+    const orderId = searchParams.get('order_id')
+
+    useEffect(()=>{
+        dispatch(getOrderById(orderId))
+    },[orderId])
+    
+    const handleCheckout=()=>{
+        dispatch(createPayment(orderId))
+    }
+
     return (
         <div className="space-y-5">
             <div className="p-5 shadow-lg rounded-md border ">
@@ -49,12 +68,12 @@ const OrderSummary = () => {
                         </div>
 
                         <Button
-                            // onClick={handleCreatePayment}
+                            onClick={handleCheckout}
                             variant="contained"
                             type="submit"
                             sx={{ padding: ".8rem 2rem", marginTop: "2rem", width: "100%" }}
                         >
-                            Payment
+                            Checkout
                         </Button>
                     </div>
                 </div>
